@@ -1,0 +1,23 @@
+{
+  "name": "challenge18",
+  "version": "1.0.0",
+  "description": "github repo:\r https://github.com/crocket77/socializer.git",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crocket77/socializer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crocket77/socializer/issues"
+  },
+  "homepage": "https://github.com/crocket77/socializer#readme",
+  "dependencies": {
+    "mongoose": "^6.3.0"
+  }
+}
