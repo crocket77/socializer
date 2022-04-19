@@ -3,19 +3,18 @@ const { Schema, model } = require('mongoose');
 const UserSchema = new Schema({
     username: {
       type: String,
-      require:true
+      required:true,
+      trim:true
     },
     email: {
       type: String,
-      require:true
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now
-    },
-    size: {
-      type: String,
-      default: 'Large'
+      required:true,
+      validate:{
+          validator(isEmail){
+              return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(isEmail);
+          },
+          message:"That email was not valid. Please enter a valid one"          
+      }
     },
     thoughts: [],
     friends:[]
