@@ -80,7 +80,32 @@ const thoughtController = {
           res.json({ message: 'thought removed' });
         })
         .catch(err => res.json(err));
-    }
+    },    
+    createReaction({params,body},res){
+      Thought.findOneAndUpdate(
+        {_id:params.thoughtId},
+        {$push:{reactions:body}},
+        {new:true}
+      )
+      .select('-__v')
+      .then(data=>{
+        if(!data){
+          res.status(404).json({message:'No thought found with this id!'});
+          return;
+        }
+        res.json(data);
+      })
+      .catch(err=>res.json(err));
+    },
+    removeReaction({params},res){
+      Thought.findOneAndUpdate(
+        {_id:params.thoughtId},
+        {$pull:{comments:params.thoughtId}},
+        {new:true}
+      )
+    .then(data=>res.json({message:"reaction removed"}))
+  }
+
 };
 
 module.exports = thoughtController;
