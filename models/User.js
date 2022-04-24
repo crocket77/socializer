@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 const UserSchema = new Schema({
     username: {
@@ -23,7 +23,14 @@ const UserSchema = new Schema({
       }
     ],
     friends:[]
-  });
+  },
+  {
+    toJSON:{
+      virtuals:true,
+      getters:true
+    }
+  }
+  );
 
 // get total count of thoughts and replies on retrieval
 UserSchema.virtual('thoughtCount').get(function() {

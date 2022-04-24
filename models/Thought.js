@@ -1,18 +1,30 @@
 const { Schema, model } = require('mongoose');
 
-const CommentSchema = new Schema({
-  writtenBy: {
-    type: String
-  },
-  commentBody: {
-    type: String
+const ThoughtSchema = new Schema({
+  thoughtBody: {
+    type: String,
+    required:true,
+    maxlength:280,
+    minlength:1
   },
   createdAt: {
     type: Date,
     default: Date.now
-  }
-});
+  },
+  username:{
+    type:String,
+    required:true
+  },
+},
+  // {
+  //   toJSON:{
+  //     getters:true,
+  //     virtuals:true
+  //   },
+  //   id:false
+  // }
+);
 
-const Comment = model('Comment', CommentSchema);
+const Thought= model('Thought', ThoughtSchema);
 
-module.exports = Comment;
+module.exports = Thought;
