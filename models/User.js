@@ -19,22 +19,27 @@ const UserSchema = new Schema({
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'thoughts'
+        ref: 'Thought'
       }
     ],
-    friends:[]
+    friends:[this]
   },
   {
     toJSON:{
       virtuals:true,
       getters:true
-    }
+    },
+    id:false
   }
   );
 
 // get total count of thoughts and replies on retrieval
 UserSchema.virtual('thoughtCount').get(function() {
   return this.thoughts.length;
+});
+
+UserSchema.virtual('friendCount').get(function(){
+  return this.friends.length;
 });
 
   // create the User model using the PizzaSchema
