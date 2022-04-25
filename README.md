@@ -1,16 +1,24 @@
-github repo:
+# Social Network API
+## Description
+This is a back-end server that stores data pertaining to users, their thoughts, friends and reactions to thoughts.
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credit](#credit)
+* [Github](#github repo)
+
+## Installation
+1. Clone the repository.
+2. Ensure node.js and MongoDB is installed.
+3. Run the command "npm i" to download dependencies.
+
+## Usage
+2. Run the command npm start to launch the server.
+3. Use the Insomnia to make queries to the server endpoints.
+
+## Credit
+Ethan C. Pfeiffer
+
+## github repo
 https://github.com/crocket77/socializer.git
-
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
-
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
