@@ -1,6 +1,6 @@
 # Social Network API
 ## Description
-This is a back-end server that stores data pertaining to users, their thoughts, friends and reactions to thoughts.
+This is a back-end server that stores data pertaining to users, thoughts, friends and reactions to thoughts.
 
 ## Table of Contents
 * [Installation](#installation)
