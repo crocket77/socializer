@@ -6,7 +6,7 @@ This is a back-end server that stores data pertaining to users, thoughts, friend
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credit](#credit)
-* [Github](#github repo)
+* [Github](#github)
 
 ## Installation
 1. Clone the repository.
@@ -20,5 +20,5 @@ This is a back-end server that stores data pertaining to users, thoughts, friend
 ## Credit
 Ethan C. Pfeiffer
 
-## github repo
+## Github
 https://github.com/crocket77/socializer.git
